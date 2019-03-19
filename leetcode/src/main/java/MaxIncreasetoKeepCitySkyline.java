@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
  * @description TODO
  */
 public class MaxIncreasetoKeepCitySkyline {
+
     private static final Logger logger = LoggerFactory.getLogger(MaxIncreasetoKeepCitySkyline.class);
 
     public static void main(String[] args) {
