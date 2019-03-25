@@ -15,7 +15,7 @@ public class EncodeAndDecodeTinyURL1 {
     /**
      * (26+26+10)^6
      */
-    private static final String RANDOM_STR = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    private static final String RANDOM_STR_SOURCE = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
     private Map<String, String> short2Url = new HashMap<>();
     private Map<String, String> url2Short = new HashMap<>();
@@ -47,7 +47,7 @@ public class EncodeAndDecodeTinyURL1 {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < 6; i++) {
             Random random = new Random();
-            sb.append(RANDOM_STR.charAt(random.nextInt(62)));
+            sb.append(RANDOM_STR_SOURCE.charAt(random.nextInt(62)));
         }
         return sb.toString();
     }
