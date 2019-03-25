@@ -9,8 +9,8 @@ import java.util.Set;
  * @date 2019/3/18 0:10
  * @description TODO
  */
-public class JewelsandStones {
-    private static final Logger logger = LoggerFactory.getLogger(JewelsandStones.class);
+public class JewelsAndStones {
+    private static final Logger logger = LoggerFactory.getLogger(JewelsAndStones.class);
 
     public static void main(String[] args) {
         System.out.println(numJewelsInStones("aA", "aAAbbbb"));
