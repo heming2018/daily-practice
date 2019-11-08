@@ -14,14 +14,14 @@ public class JumpFloorII {
         if (target == 0) {
             return 0;
         }
-        if (target <= 2) {
-            return target;
+        if (target == 1) {
+            return 1;
         }
-        int count = 1;
-        while (target > 2) {
-            count *= 2;
+        int res = 1;
+        while (target > 1) {
+            res *= 2;
             target -= 1;
         }
-        return count * 2;
+        return res;
     }
 }
