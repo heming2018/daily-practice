@@ -1,14 +1,11 @@
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
  * @author heming
  * @date 2019/11/8 00:13
  * @description TODO
  */
 public class JumpFloorII {
-    private static final Logger logger = LoggerFactory.getLogger(JumpFloorII.class);
 
+    
     public static void main(String[] args) {
         System.out.println(jumpFloorII(4));
     }
