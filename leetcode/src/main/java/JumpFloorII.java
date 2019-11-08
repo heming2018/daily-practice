@@ -7,25 +7,21 @@ public class JumpFloorII {
 
     
     public static void main(String[] args) {
-        System.out.println(jumpFloorII(4));
+        System.out.println(JumpFloorII(4));
     }
 
-    public static int jumpFloorII(int target) {
-        int res = 0;
-        if (target == 1) {
-            return 1;
-        } else if (target == 2) {
-            return 2;
-        } else if (target > 2) {
-            while (target >= 1) {
-                res += jumpFloorII(target - 1);
-                target--;
-            }
-            res++;
-            return res;
-        } else {
+    public static int JumpFloorII(int target) {
+        if (target == 0) {
             return 0;
         }
+        if (target <= 2) {
+            return target;
+        }
+        int count = 1;
+        while (target > 2) {
+            count *= 2;
+            target -= 1;
+        }
+        return count * 2;
     }
-
 }
