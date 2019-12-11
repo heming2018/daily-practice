@@ -47,6 +47,8 @@ public class PrintMatrix {
                 list.add(matrix[x][y]);
                 y++;
             }
+            // 这里多读一位，是为了把正向的节点都读完。
+            // 因为后两步需要判断是不是单列或者单行，如果是，就不往下读了。
             while (x <= xEndIndex) {
                 list.add(matrix[x][y]);
                 x++;
