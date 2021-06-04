@@ -16,6 +16,9 @@ public class KuohaoPipei {
     }
 
     private static boolean isValid(String str) {
+        if (str == null || str.isEmpty()) {
+            return true;
+        }
         Stack<Character> stack = new Stack<>();
         Map<Character, Character> map = new HashMap<>();
         map.put('[',']');
