@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 public class SingleTon2 {
     private static final Logger logger = LoggerFactory.getLogger(SingleTon2.class);
 
-    private static SingleTon2 singleTon2;
+    private static volatile SingleTon2 singleTon2;
 
     private SingleTon2() {
     }
