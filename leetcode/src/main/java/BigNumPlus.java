@@ -6,7 +6,7 @@
 public class BigNumPlus {
 
     public static void main(String[] args) {
-        System.out.println(add("11123231211","0"));
+        System.out.println(add("9999999","9999999"));
     }
 
     static String add(String left, String right) {
@@ -32,6 +32,9 @@ public class BigNumPlus {
                 sb.append(sum);
                 jinwei = 0;
             }
+        }
+        if (jinwei > 0) {
+            sb.append(jinwei);
         }
         return reverseStr(sb.toString());
     }
