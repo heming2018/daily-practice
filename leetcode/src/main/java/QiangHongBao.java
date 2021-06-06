@@ -15,7 +15,7 @@ public class QiangHongBao {
     private static final Logger logger = LoggerFactory.getLogger(QiangHongBao.class);
 
     public static void main(String[] args) {
-        qiangHongBao(10, 5);
+        qiangHongBao(10, 6);
     }
 
 
