@@ -16,6 +16,34 @@ public class ReverseList {
         }
     }
 
+    public ListNode reverseListNew1(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+
+    }
+
+
+
+    public ListNode reverseListNew(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+
+        ListNode pre = null;
+        ListNode curr = head;
+
+        while (curr != null) {
+            ListNode temp = curr.next;
+            curr.next = pre;
+
+            pre = curr;
+            curr = temp;
+        }
+
+        return pre;
+    }
+
     /**
      * 常规出栈解法
      */

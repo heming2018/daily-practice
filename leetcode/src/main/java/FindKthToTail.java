@@ -4,7 +4,9 @@ import java.util.List;
 /**
  * @author heming
  * @date 2019/11/17 22:06
- * @description 输入一个链表，输出该链表中倒数第k个结点。
+ * @description
+ * 输入一个链表，输出一个链表，该输出链表包含原链表中从倒数第k个结点至尾节点的全部节点。
+ * 如果该链表长度小于k，请返回一个长度为 0 的链表。
  */
 public class FindKthToTail {
 

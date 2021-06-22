@@ -16,7 +16,7 @@ public class SingleTon2 {
     private SingleTon2() {
     }
 
-    private static synchronized SingleTon2 getSingleTon2() {
+    private static SingleTon2 getSingleTon2() {
         if (singleTon2 == null) {
             synchronized (SingleTon2.class) {
                 if (singleTon2 == null) {

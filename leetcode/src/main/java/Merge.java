@@ -28,7 +28,7 @@ public class Merge {
         i22.next = i23;
         i23.next = i24;
 
-        ListNode listNode = Merge1(i11, i21);
+        ListNode listNode = Merge(i11, i21);
         System.out.println(listNode);
 
     }
@@ -37,46 +37,39 @@ public class Merge {
      * 个人解法：
      * 先遍历两个链表，直到一条链表为空，然后将非空的那条链表追加到结果后面
      *
-     * @param list1
-     * @param list2
+     * @param l1
+     * @param l2
      * @return
      */
-    public static ListNode Merge(ListNode list1, ListNode list2) {
-        if (list1 == null) {
-            return list2;
-        }
-        if (list2 == null) {
-            return list1;
+    public static ListNode Merge(ListNode l1, ListNode l2) {
+        if (l1 == null && l2 == null) {
+            return null;
         }
 
-        ListNode res = new ListNode(Math.min(list1.val, list2.val));
-        if (res.val == list1.val) {
-            list1 = list1.next;
-        } else {
-            list2 = list2.next;
-        }
-
-        ListNode lastNode = res;
-
-        while (list1 != null && list2 != null) {
-            int min = Math.min(list1.val, list2.val);
-            if (min == list1.val) {
-                lastNode.next = list1;
-                list1 = list1.next;
-            } else {
-                lastNode.next = list2;
-                list2 = list2.next;
+        ListNode head = new ListNode(0);
+        ListNode curr = head;
+        while (l1 != null && l2 != null) {
+            if (curr.next == null) {
+                curr.next = new ListNode(0);
             }
-            lastNode = lastNode.next;
-        }
-        if (list1 != null) {
-            lastNode.next = list1;
-        }
-        if (list2 != null) {
-            lastNode.next = list2;
+
+            if (l1.val < l2.val) {
+                curr.next.val = l1.val;
+                l1 = l1.next;
+            } else {
+                curr.next.val = l2.val;
+                l2 = l2.next;
+            }
+            curr = curr.next;
         }
 
-        return res;
+        if (l1 == null) {
+            curr.next = l2;
+        }
+        if (l2 == null) {
+            curr.next = l1;
+        }
+        return head.next;
     }
 
     public static ListNode Merge1(ListNode list1, ListNode list2) {
