@@ -16,15 +16,6 @@ public class ReverseList {
         }
     }
 
-    public ListNode reverseListNew1(ListNode head) {
-        if (head == null) {
-            return null;
-        }
-
-    }
-
-
-
     public ListNode reverseListNew(ListNode head) {
         if (head == null) {
             return null;
