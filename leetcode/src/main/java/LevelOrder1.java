@@ -6,38 +6,35 @@ import java.util.HashMap;
  * 例如：
  * 给定的二叉树是{3,9,20,#,#,15,7},
  */
-public class LevelOrder {
+public class LevelOrder1 {
 
     /**
      * @param root TreeNode类
      * @return int整型ArrayList<ArrayList <>>
      */
     public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
-        ArrayList<ArrayList<Integer>> list = new ArrayList<ArrayList<Integer>>();
+        ArrayList<ArrayList<Integer>> list = new ArrayList<>();
         if (root == null) {
             return list;
         }
+        return print(root, 0, list);
 
-        print(root, list, 0);
-        return list;
     }
 
-    void print(TreeNode node, ArrayList<ArrayList<Integer>> list, int n) {
-
-        if (list.size() == n) {
-            list.add(n, new ArrayList<Integer>());
+    ArrayList<ArrayList<Integer>> print(TreeNode node, Integer level, ArrayList<ArrayList<Integer>> list) {
+        if (list.size() <= level) {
+            list.add(level, new ArrayList<>());
         }
 
-        ArrayList<Integer> curr = list.get(n);
-        curr.add(node.val);
+        list.get(level).add(node.val);
 
         if (node.left != null) {
-            print(node.left, list, n + 1);
+            print(node.left, level + 1, list);
         }
-
-        if (node.right != null) {
-            print(node.right, list, n + 1);
+        if (node.right != null){
+            print(node.right, level + 1, list);
         }
+        return list;
     }
 
     class TreeNode {

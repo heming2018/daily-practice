@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -7,7 +8,7 @@ import java.util.Stack;
  */
 public class ReverseList {
 
-    public static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next = null;
 
@@ -16,20 +17,26 @@ public class ReverseList {
         }
     }
 
-    public ListNode reverseListNew(ListNode head) {
-        if (head == null) {
-            return null;
+    /**
+     * null->1->2->5->6->null
+     * null<-1<-2<-5<-6<-null
+     * @param head
+     * @return
+     */
+    public ListNode reverse(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
         }
-
-        ListNode pre = null;
         ListNode curr = head;
-
+        ListNode pre = null;
         while (curr != null) {
-            ListNode temp = curr.next;
-            curr.next = pre;
+            ListNode temp = pre;
 
-            pre = curr;
-            curr = temp;
+            pre = new ListNode(curr.val);
+            pre.next = temp;
+
+            curr = curr.next;
+
         }
 
         return pre;
