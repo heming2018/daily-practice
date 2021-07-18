@@ -2,6 +2,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author heming1
@@ -23,16 +25,16 @@ public class LC3_lengthOfLongestSubstring {
         if (s.length() == 1) {
             return 1;
         }
-        HashMap<Character, Integer> map = new HashMap<>();
+        Set<Character> set = new HashSet<>();
         int l = 0, r = 0;
         int res = 1;
         while (l <= r && r < s.length()) {
-            if (!map.containsKey(s.charAt(r))) {
-                map.put(s.charAt(r), r);
+            if (!set.contains(s.charAt(r))) {
+                set.add(s.charAt(r));
                 res = Math.max(res, r - l + 1);
                 r++;
             } else {
-                map.remove(s.charAt(l));
+                set.remove(s.charAt(l));
                 l++;
             }
         }
