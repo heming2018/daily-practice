@@ -18,7 +18,7 @@
 
     <modules>
         <module>unit-test</module>
-        <module>leetcode</module>
+        <module>algorithm</module>
     </modules>
     
 </project>
