@@ -18,7 +18,7 @@
 
     <modules>
         <module>unit-test</module>
-        <module>algorithm</module>
+        <module>algorithm-practice</module>
     </modules>
     
 </project>

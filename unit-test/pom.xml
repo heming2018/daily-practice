@@ -10,7 +10,6 @@
     </parent>
 
     <artifactId>unit-test</artifactId>
-
     <name>unit-test</name>
 
     <dependencies>
