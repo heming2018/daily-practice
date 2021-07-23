@@ -9,9 +9,6 @@ import org.slf4j.LoggerFactory;
 public class ToLowerCase {
     private static final Logger logger = LoggerFactory.getLogger(ToLowerCase.class);
 
-    public static void main(String[] args) {
-    }
-
     public static String toLowerCase(String str) {
         return str.toLowerCase();
     }
@@ -30,6 +27,11 @@ public class ToLowerCase {
         }
         return new String(chars);
 
+    }
+
+    public static void main(String[] args) {
+        int i = '1' - '0';
+        System.out.println(i);
     }
 
 }
