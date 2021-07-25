@@ -17,9 +17,9 @@ import java.util.Set;
 public class LC3_lengthOfLongestSubstring {
 
     public static void main(String[] args) {
-        System.out.println(lengthOfLongestSubstring("abcabcbb"));
+        System.out.println(lengthOfLongestSubstring1("qrsvbspk"));
     }
-
+    // 参考别人的实现
     public static int lengthOfLongestSubstring(String s) {
         if (s == null || s.length() == 0) {
             return 0;
@@ -42,4 +42,27 @@ public class LC3_lengthOfLongestSubstring {
         }
         return res;
     }
+    // 自己实现
+    public static int lengthOfLongestSubstring1(String s) {
+        if (s == null || s.length() == 0){
+            return 0;
+        }
+
+        int l = 0;
+        int r = 0;
+        Set<Character> set = new HashSet<>();
+        int res = 1;
+        while (l <= r && r < s.length()) {
+            if (!set.contains(s.charAt(r))) {
+                set.add(s.charAt(r));
+                res = Math.max(res, set.size());
+                r++;
+            } else {
+                set.remove(s.charAt(l));
+                l++;
+            }
+        }
+        return res;
+    }
+
 }

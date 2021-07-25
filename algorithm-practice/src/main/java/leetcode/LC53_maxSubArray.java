@@ -1,8 +1,5 @@
 package leetcode;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
  * 53. 最大子序和
  * https://leetcode-cn.com/problems/maximum-subarray/
@@ -21,12 +18,14 @@ public class LC53_maxSubArray {
      * LC写法
      */
     public int maxSubArrayLC(int[] nums) {
-        int pre = 0, maxAns = nums[0];
-        for (int x : nums) {
-            pre = Math.max(pre + x, x);
-            maxAns = Math.max(maxAns, pre);
+        if (nums == null) return -1;
+        if (nums.length == 1) return nums[0];
+        int pre = 0, max = nums[0];
+        for(int n : nums) {
+            pre = Math.max(pre + n, n);
+            max = Math.max(pre, max);
         }
-        return maxAns;
+        return max;
     }
 
     /**

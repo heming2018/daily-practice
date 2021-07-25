@@ -1,8 +1,9 @@
+package leetcode;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -20,16 +21,30 @@ import java.util.Set;
  * 第一部分{3,2,0,-4}代表一个链表，第二部分的1表示，-4到位置1，即-4->2存在一个链接，组成传入的head为一个带环的链表 ,返回true
  *
  */
-public class HasCycle {
-    private static final Logger logger = LoggerFactory.getLogger(HasCycle.class);
+public class LC104_hasCycle {
+    private static final Logger logger = LoggerFactory.getLogger(LC104_hasCycle.class);
 
-    public static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next = null;
 
         ListNode(int val) {
             this.val = val;
         }
+    }
+
+    public boolean hasCycle0(ListNode head) {
+        ListNode fast = head;
+        ListNode slow = head;
+
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            if (fast == slow) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
@@ -50,17 +65,5 @@ public class HasCycle {
         return false;
     }
 
-    public boolean hasCycle0(ListNode head) {
-        ListNode fast = head;
-        ListNode slow = head;
 
-        while (fast != null && fast.next != null) {
-            fast = fast.next.next;
-            slow = slow.next;
-            if (fast == slow) {
-                return true;
-            }
-        }
-        return false;
-    }
 }
