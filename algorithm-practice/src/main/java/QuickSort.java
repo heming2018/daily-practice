@@ -6,7 +6,7 @@ import java.util.Arrays;
 /**
  * @author heming1
  * @date 2021/6/21 5:02 下午
- * @description TODO
+ * 
  */
 public class QuickSort {
     private static final Logger logger = LoggerFactory.getLogger(QuickSort.class);

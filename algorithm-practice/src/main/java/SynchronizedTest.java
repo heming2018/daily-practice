@@ -4,7 +4,7 @@ import org.slf4j.LoggerFactory;
 /**
  * @author heming1
  * @date 2021/7/8 1:16 上午
- * @description TODO
+ * 
  */
 public class SynchronizedTest {
     private static volatile Logger logger = LoggerFactory.getLogger(SynchronizedTest.class);

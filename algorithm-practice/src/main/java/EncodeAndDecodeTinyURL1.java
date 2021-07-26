@@ -8,7 +8,7 @@ import java.util.Random;
 /**
  * @author heming1
  * @date 2019/3/24 19:03
- * @description TODO
+ * 
  */
 public class EncodeAndDecodeTinyURL1 {
     private static final Logger logger = LoggerFactory.getLogger(EncodeAndDecodeTinyURL1.class);

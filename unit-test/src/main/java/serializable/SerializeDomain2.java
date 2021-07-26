@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * @author heming1
  * @date 2019/3/25 9:49
- * @description TODO
+ * 
  */
 public class SerializeDomain2 implements Serializable {
 

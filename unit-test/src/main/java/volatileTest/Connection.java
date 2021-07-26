@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 /**
  * @author heming
  * @date 2019/11/23 18:22
- * @description TODO
+ * 
  */
 public class Connection {
     private static final Logger logger = LoggerFactory.getLogger(Connection.class);

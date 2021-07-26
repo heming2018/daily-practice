@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * @author heming1
  * @date 2021/6/20 3:05 上午
- * @description TODO
+ * 
  */
 public class ReentrantLockTest implements Runnable {
     private static final Logger logger = LoggerFactory.getLogger(ReentrantLockTest.class);

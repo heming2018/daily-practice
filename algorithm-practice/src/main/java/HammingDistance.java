@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * @author 10237
  * @date 2019/3/20 23:19
- * @description TODO
+ * 
  */
 public class HammingDistance {
     private static final Logger logger = LoggerFactory.getLogger(HammingDistance.class);

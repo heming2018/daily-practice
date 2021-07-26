@@ -4,7 +4,7 @@ import org.slf4j.LoggerFactory;
 /**
  * @author heming1
  * @date 2019/3/24 16:12
- * @description TODO
+ * 
  */
 public class TypeMaxAndMin {
     private static final Logger logger = LoggerFactory.getLogger(TypeMaxAndMin.class);

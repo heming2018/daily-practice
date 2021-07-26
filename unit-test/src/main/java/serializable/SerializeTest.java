@@ -9,7 +9,7 @@ import java.io.Serializable;
 /**
  * @author heming1
  * @date 2019/3/25 9:47
- * @description TODO
+ * 
  */
 public class SerializeTest implements Serializable {
     private static final Logger logger = LoggerFactory.getLogger(SerializeTest.class);

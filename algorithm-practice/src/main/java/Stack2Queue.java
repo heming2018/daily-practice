@@ -6,7 +6,7 @@ import java.util.Stack;
 /**
  * @author heming1
  * @date 2021/7/7 12:24 上午
- * @description TODO
+ * 
  */
 public class Stack2Queue {
     Stack<Integer> stack1 = new Stack<Integer>();

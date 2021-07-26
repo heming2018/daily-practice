@@ -12,7 +12,7 @@ import java.util.Properties;
 /**
  * @author heming
  * @date 2019-06-06 13:50
- * @description TODO
+ * 
  */
 public class SendEmail {
     private static final Logger logger = LoggerFactory.getLogger(SendEmail.class);
